@@ -1,0 +1,18 @@
+
+For understanding how a browser actually render a website, we need to understand what is DOM, CSSOM, and Render Tree
+
+Document Object Model(DOM)=> When a browser sends a request to a server to fetch an HTML document, the server returns an HTML page in binary stream format which is basically a text file with the response header.If this header is missing, the browser would not understand how to process the file and it will render in plain text format.
+
+When the browser reads HTML code, whenever it encounters an HTML element like html, body, div etc., it creates a JavaScript object called a Node. Eventually, all HTML elements will be converted to JavaScript objects.
+
+After the browser has created Nodes from the HTML document, it has to create a tree-like structure of these node objects. Since our HTML elements in the HTML file are nested inside each other, the browser needs to replicate that but using Node objects it has previously created. This will help the browser efficiently render and manage the webpage throughout its lifecycle.A DOM tree starts from the topmost element which is html element and branches out as per the occurrence and nesting of HTML elements in the document.
+
+CSS Object Model (CSSOM)=>When we design a website, our intentions are to make it as good looking as possible. And we do that by providing some styles to HTML elements. In the HTML page, we provide styles to HTML elements using CSS which stands for Cascading Style Sheets. Using CSS selectors, we can target DOM elements and set a value to style property such as color or font-size.
+There are different methods of applying styles to HTML elements like using an external CSS file, with embedded CSS using <style> tag, with an inline method using the style attribute on HTML elements or using JavaScript.
+After constructing the DOM, the browser reads CSS from all the sources (external, embedded, inline, user-agent, etc.) and construct a CSSOM. CSSOM stands for CSS Object Model which is a Tree Like structure just like DOM.
+
+Render Tree=> Render-Tree is also a tree-like structure constructed by combining DOM and CSSOM trees together. The browser has to calculate the layout of each visible element and paint them on the screen, for that browser uses this Render-Tree. Hence, unless Render-Tree isn’t constructed, nothing is going to get printed on the screen which is why we need both DOM and CSSOM trees.
+
+
+Rendering Sequence=>When a web page is loaded, the browser first reads the HTML text and constructs DOM Tree from it. Then it processes the CSS whether that is inline, embedded, or external CSS and constructs the CSSOM Tree from it.
+After these trees are constructed, then it constructs the Render-Tree from it. Once the Render-Tree is constructed, then the browser starts the printing individual elements on the screen.
