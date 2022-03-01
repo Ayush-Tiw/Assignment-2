@@ -1,4 +1,6 @@
+Question-2) How does browser actually render a website
 
+Answer--
 For understanding how a browser actually render a website, we need to understand what is DOM, CSSOM, and Render Tree
 
 Document Object Model(DOM)=> When a browser sends a request to a server to fetch an HTML document, the server returns an HTML page in binary stream format which is basically a text file with the response header.If this header is missing, the browser would not understand how to process the file and it will render in plain text format.
