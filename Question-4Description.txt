@@ -1,0 +1,22 @@
+Question-4) Execute the below code and write your description in txt file
+typeof(1)
+typeof(1.1)
+typeof('1.1')
+typeof(true)
+typeof(null)
+typeof(undefined)
+typeof([])
+typeof({})
+typeof(NaN)
+
+ Answer-
+ typeof is a javascript keyword that will return the data type of operand .The operand can be any object,function,or variable
+a) in typeof(1) as 1 is a integer and in javascript integer comes under "number" datatype,so the output will be "number".
+b)  in typeof(1.1) as 1.1 is a float type and in javascript float  comes under "number" datatype ,so the output will be "number".
+c)  in typeof('1.1') in this 1.1 is a float type but it is written  in between ' ' ,in javascript anything written in between ' ' will be treated as "string",so the output wil be "string"
+d)  in typeof(true) true and false are boolean datatype so the output will be "boolean".
+e)  in typeof(null) null comes under object datatype so output will be "object".
+f)  typeof(undefined) the output will be "undefined"
+g) typeof([]) square bracket[] used in array so the output will "object".
+h) typeof({}) curley brackets used to define object ,so the output will be "object".
+i) typeof(NaN) the output willl be "number".
